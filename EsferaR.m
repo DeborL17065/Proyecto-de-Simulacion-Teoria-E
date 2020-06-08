@@ -10,7 +10,7 @@ global e
 
 %% Computar los valores
 R = 1000;
-e = 4;
+e = 1;
 
 
 VOLTAJE_ADENTRO =  @(x,y)(-(((3*x)/(2*e)).*cos(y))+((6*(x.^3))/(7*e*(R^2))).*((5/2).*((cos(y)).^3)-((3/2).*cos(y))));
