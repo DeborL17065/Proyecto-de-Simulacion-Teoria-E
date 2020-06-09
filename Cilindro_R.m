@@ -20,7 +20,7 @@ y1 = 0:2*pi;
 F= (x>R).*(-E_0.*x.*cos(y).*(1-(R^2./x.^2)));
 
 
-meshc(x,y,F);
+meshc(F);
 colormap (hsv)
 colorbar; 
 grid off
