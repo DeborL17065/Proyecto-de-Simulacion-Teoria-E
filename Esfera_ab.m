@@ -32,11 +32,11 @@ grid off
 
 
 hold on
-[U,V] = gradient(F,50,50);
-quiver(x,y,U,V)
+U= gradient(F);
+quiver3(x,y,U,U)
 hold off
 
-xticks([0 a  b 50])
+xticks([0 a ])
 %%xticklabels({'0', '500', '1000'})
 xlabel('r')
 %%yticks([0 (3*pi)/4 pi])
@@ -46,7 +46,7 @@ zlabel('V(r,theta)');
 title('Potencial en 3D');
 
 figure(2)
-x1 = a:50;
+x1 = a:b;
 y1 = 0:pi;
 [x, y] = meshgrid(x1, y1);
 F = (a<x<b).*(((k1/2)*(a-((x).*cos(y))))-((k*b.*x)/e)+ ((2*k*(x.^2))/(5*e*b)).*((3/2)*((cos(y)).^2)-(1/2)));
@@ -58,11 +58,11 @@ grid off
 
 
 hold on
-[U,V] = gradient(F,50,50);
-quiver(x,y,U,V)
+U= gradient(F);
+quiver3(x,y,U,U)
 hold off
 
-xticks([0 a  b 50])
+xticks([ a  b ])
 %%xticklabels({'0', '500', '1000'})
 xlabel('r')
 %%yticks([0 (3*pi)/4 pi])
@@ -83,11 +83,11 @@ colorbar;
 grid off
 
 hold on
-[U,V] = gradient(F,50,50);
-quiver(x,y,U,V)
+U= gradient(F);
+quiver3(x,y,U,U)
 hold off
 
-xticks([0 a  b 50])
+xticks([ b 50])
 %%xticklabels({'0', '500', '1000'})
 xlabel('r')
 %%yticks([0 (3*pi)/4 pi])
